@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- script.js file -->
+    <script src="./script.js"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontswesome -->
+    <script src="https://kit.fontawesome.com/bc94aa2890.js" crossorigin="anonymous"></script>
+
+    <style>
+        
+    </style>
+</head>
+<body class="bg-black m-0">
+    <!-- Navbar Starts -->
+    <nav class="bg-black md:top-0 sticky shadow-lg shadow-cyan-200/30 md:flex flex justify-between items-center md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
+        <img class="w-24 ml-0 md:ml-6" src="../assets/icon.png" alt="logo-png">
+        <ul class="text-white hidden md:flex md:justify-between mr-6">
+
+            <li class="hover:shadow-cyan-200 duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+                <a class="text-[18px] font-semibold" href="#">Home</a>
+            </li>
+
+            <li class="hover:shadow-cyan-200 duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+                <a class="text-[18px] font-semibold" href="#">About</a>
+            </li>
+
+            <li class="hover:shadow-cyan-200 duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+                <a class="text-[18px] font-semibold" href="#">Portfolio</a></li>
+
+            <li class="hover:shadow-cyan-200 duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+                <a class="text-[18px] font-semibold" href="#">Certifications</a>
+            </li>
+
+            <li class="hover:shadow-cyan-200 duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+                <a class="text-[18px] font-semibold" href="#">Contact</a>
+            </li>
+
+        </ul>
+
+        <i class="fa-solid fa-bars md:hidden text-white cursor-pointer flex mr-8 text-3xl"></i>
+    </nav>
+    <!-- Navbar Ends -->
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>
