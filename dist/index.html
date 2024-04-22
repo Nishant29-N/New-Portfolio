@@ -16,15 +16,23 @@
     <!-- fontswesome -->
     <script src="https://kit.fontawesome.com/bc94aa2890.js" crossorigin="anonymous"></script>
 
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+        * {
+            font-family: Montserrat;
+        }
+    </style>
 </head>
 <body class="bg-slate-100 dark:bg-slate-950 m-0">
     <!-- Navbar Starts -->
     <nav class="bg-slate-100 dark:bg-slate-950 md:top-0 sticky shadow-lg dark:shadow-cyan-200 md:flex flex justify-between items-center md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
         <img class="w-24 ml-0 md:ml-6 cursor-pointer" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
+
+        <!-- Nav Links -->
         <ul class="dark:text-white text-slate-900 hidden md:flex md:justify-between mr-6  md:flex-wrap">
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
-                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Home</a>
+                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#home">Home</a>
             </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
@@ -32,7 +40,8 @@
             </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
-                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Portfolio</a></li>
+                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Portfolio</a>
+            </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Certifications</a>
@@ -41,15 +50,25 @@
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Contact</a>
             </li>
-
+            
         </ul>
-
+        <!-- Navlinks Menu -->
         <i class="fa-solid fa-bars md:hidden text-white cursor-pointer flex mr-8 text-3xl"></i>
     </nav>
     <!-- Navbar Ends -->
 
     <!-- Header Starts -->
 
+    <header class="flex flex-col md:flex" id="#home">
+        <div class="left-section flex flex-col text-white justify-center items-center text-left">
+            <h1 class="text-3xl">Hi</h1>
+            <span class="text-3xl font-bold text-cyan-500">I'm Nishant</span>
+            <p class="text-3xl">I'm a Web Developer and a Graphic Designer</p>
+        </div>
+        <div class="right-section">
+            im
+        </div>
+    </header>
 
     <!-- Header Ends -->
 </body>
