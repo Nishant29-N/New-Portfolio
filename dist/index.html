@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Updated Portfolio</title>
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -20,13 +21,14 @@
         @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
         * {
             font-family: Montserrat;
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body class="bg-slate-100 dark:bg-slate-950 m-0">
     <!-- Navbar Starts -->
-    <nav class="bg-slate-100 dark:bg-slate-950 md:top-0 sticky shadow-lg dark:shadow-cyan-200 md:flex flex justify-between items-center md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
-        <img class="w-24 ml-0 md:ml-6 cursor-pointer" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
+    <nav class="bg-slate-100 dark:bg-slate-950 md:top-0 top-0 z-40 sticky md:sticky shadow-md dark:shadow-cyan-200 md:flex flex justify-between items-center md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
+        <img class="w-24 ml-0 md:ml-6 cursor-pointer animate-pulse flex" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
 
         <!-- Nav Links -->
         <ul class="dark:text-white text-slate-900 hidden md:flex md:justify-between mr-6  md:flex-wrap">
@@ -36,7 +38,7 @@
             </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
-                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">About</a>
+                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#about">About</a>
             </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
@@ -59,17 +61,53 @@
 
     <!-- Header Starts -->
 
-    <header class="flex flex-col md:flex" id="#home">
-        <div class="left-section flex flex-col text-white justify-center items-center text-left">
-            <h1 class="text-3xl">Hi</h1>
+    <header class="flex flex-col md:flex-row w-full h-full">
+        <div class="left-section flex flex-col mt-8 text-white justify-center  text-left mx-20"  id="home">
+            <h1 class="text-3xl">Hi!</h1>
             <span class="text-3xl font-bold text-cyan-500">I'm Nishant</span>
-            <p class="text-3xl">I'm a Web Developer and a Graphic Designer</p>
+            <p class="text-3xl py-7">I'm a Web Developer and a Graphic Designer.</p>
+            <button class="animate-pulse font-semibold bg-cyan-500 rounded-md py-2 border-white border hover:bg-slate-950 hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
+                <i class="fa-solid fa-arrow-right text-2xl mx-2"></i>
+                <a class="text-[20px]" href="../assets/Nishant's Updated Resume (2).pdf" target="_blank" download="">Download Resume</a>
+            </button>
         </div>
-        <div class="right-section">
-            im
+        <div class="right-section md:w-[100%] mt-7 md:mt-12 md:mx-0 mx-4 flex justify-center  items-center">
+            <img class="border-x-[#ff84f1] border-y-[#bcf5ff] border rounded-full" src="../assets/hero-container-img.png" alt="">
         </div>
     </header>
 
     <!-- Header Ends -->
+
+    <!-- About Section Starts -->
+
+    <section class="about-main h-full my-7 md:mt-[120px] flex flex-col md:flex-row w-full items-center" id="about">
+        <div class="about-left  md:w-[100%] flex justify-center  items-center md:mx-0 mx-4 mb-14">
+            <img class="border-x-[#ff84f1] md:mx-0 mx-4 flex justify-center items-center border-y-[#bcf5ff] border rounded-full" src="../assets/about-container-img.png" alt="">
+        </div>
+        <div class="about-right md:w-[100%] text-white md:mx-0 mx-12 flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-bold ml-0 md:ml-8">About ME</h1>
+            <p class="py-4 text-justify md:mx-8">
+                Hello there! I'm 
+                <span class="text-cyan-400 font-bold text-2xl animate-pulse">
+                    Nishant,
+                </span>
+                 a front-end developer with a strong interest who is just getting started on the fascinating field of web development. My area of expertise is creating aesthetically beautiful and intuitive interfaces with HTML, CSS, and TailwindCSS. I work hard to create websites that look amazing and give visitors a smooth experience. I have a sharp eye for design and I adore clean, efficient code.
+                <br><br>
+                I'm now learning more JavaScript in order to broaden my skill set and realize the full potential of dynamic and interactive web applications. I'm excited to continue learning new technologies and keeping up with front-end development trends.
+                I'm eager to collaborate, grow, and contribute to the ever-evolving world of web development.
+                <br><br>
+                Let's build something amazing projects together!
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section Ends -->
+
+
+    <!-- Skills Section Starts -->
+
+
+
+    <!-- Skills Section Ends -->
 </body>
 </html>
