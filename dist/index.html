@@ -28,7 +28,7 @@
 <body class="bg-slate-100 dark:bg-slate-950 m-0">
     <!-- Navbar Starts -->
     <nav class="bg-slate-100 dark:bg-slate-950 md:top-0 top-0 z-40 sticky md:sticky shadow-md dark:shadow-cyan-200 md:flex flex justify-between items-center md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
-        <img class="w-24 ml-0 md:ml-6 cursor-pointer animate-pulse flex" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
+        <img class="w-24 ml-0 md:ml-6 cursor-pointer flex" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
 
         <!-- Nav Links -->
         <ul class="dark:text-white text-slate-900 hidden md:flex md:justify-between mr-6  md:flex-wrap">
@@ -62,33 +62,43 @@
     <!-- Header Starts -->
 
     <header class="flex flex-col md:flex-row w-full h-full">
-        <div class="left-section flex flex-col mt-8 text-white justify-center  text-left mx-20"  id="home">
-            <h1 class="text-3xl">Hi!</h1>
-            <span class="text-3xl font-bold text-cyan-500">I'm Nishant</span>
-            <p class="text-3xl py-7">I'm a Web Developer and a Graphic Designer.</p>
-            <button class="animate-pulse font-semibold bg-cyan-500 rounded-md py-2 border-white border hover:bg-slate-950 hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
-                <i class="fa-solid fa-arrow-right text-2xl mx-2"></i>
+        <div class="left-section flex flex-col mt-8 text-white justify-center text-left mx-20"  id="home">
+
+            <h1 class="text-3xl dark:text-white text-black">Hi!</h1>
+
+            <span class="text-3xl font-bold dark:text-cyan-400 text-cyan-950 ">I'm Nishant</span>
+
+            <p class="text-3xl py-7 dark:text-white text-black">I'm a Web Developer and a Graphic Designer.</p>
+
+            <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950 hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
+
+                <i class="fa-solid fa-arrow-right text-2xl mx-2 animate-pulse duration-700 dark:animate-none"></i>
                 <a class="text-[20px]" href="../assets/Nishant's Updated Resume (2).pdf" target="_blank" download="">Download Resume</a>
+
             </button>
         </div>
+
         <div class="right-section md:w-[100%] mt-7 md:mt-12 md:mx-0 mx-4 flex justify-center  items-center">
-            <img class="border-x-[#ff84f1] border-y-[#bcf5ff] border rounded-full" src="../assets/hero-container-img.png" alt="">
+            <img class="dark:border-x-[#ff84f1] dark:border-y-[#bcf5ff] border-black border rounded-full" src="../assets/hero-container-img.png" alt="">
         </div>
+
     </header>
 
     <!-- Header Ends -->
 
     <!-- About Section Starts -->
 
-    <section class="about-main h-full my-7 md:mt-[120px] flex flex-col md:flex-row w-full items-center" id="about">
-        <div class="about-left  md:w-[100%] flex justify-center  items-center md:mx-0 mx-4 mb-14">
-            <img class="border-x-[#ff84f1] md:mx-0 mx-4 flex justify-center items-center border-y-[#bcf5ff] border rounded-full" src="../assets/about-container-img.png" alt="">
+    <section class="about-main h-[640px] md:mt-[120px] flex md:flex-row w-full items-center" id="about">
+
+        <div class="about-left md:w-full flex justify-center items-center md:mx-0 mx-4">
+            <img class="dark:border-x-[#ff84f1] dark:border-y-[#bcf5ff] border-black w-[80%]  md:mx-0 mx-4 border rounded-full" src="../assets/about-container-img.png" alt="">
         </div>
+
         <div class="about-right md:w-[100%] text-white md:mx-0 mx-12 flex flex-col justify-center items-center">
-            <h1 class="text-2xl font-bold ml-0 md:ml-8">About ME</h1>
-            <p class="py-4 text-justify md:mx-8">
+            <h1 class="text-2xl font-bold ml-0 md:ml-8 dark:text-white text-black py-4">About ME</h1>
+            <p class=" font-medium text-justify md:mx-8 dark:text-white text-black">
                 Hello there! I'm 
-                <span class="text-cyan-400 font-bold text-2xl animate-pulse">
+                <span class="dark:text-cyan-400 text-cyan-950 font-bold text-2xl dark:animate-pulse">
                     Nishant,
                 </span>
                  a front-end developer with a strong interest who is just getting started on the fascinating field of web development. My area of expertise is creating aesthetically beautiful and intuitive interfaces with HTML, CSS, and TailwindCSS. I work hard to create websites that look amazing and give visitors a smooth experience. I have a sharp eye for design and I adore clean, efficient code.
@@ -99,6 +109,7 @@
                 Let's build something amazing projects together!
             </p>
         </div>
+
     </section>
 
     <!-- About Section Ends -->
@@ -106,11 +117,19 @@
 
     <!-- Skills Section Starts -->
 
-    <section class="skills-container">
+    <section class="skills-container h-[640px]">
+
+        <h1 class="dark:text-white text-3xl text-center font-bold">My Skills</h1>
+        <div class="skills-imgs">
+            <img src="https://cdn3d.iconscout.com/3d/free/thumb/free-html-5728485-4781249.png" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
         
     </section>
 
-
     <!-- Skills Section Ends -->
 </body>
-</html>
+</html> 
