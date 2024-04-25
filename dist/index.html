@@ -31,7 +31,7 @@
         <img class="w-24 ml-0 md:ml-6 cursor-pointer flex" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
 
         <!-- Nav Links -->
-        <ul class="dark:text-white text-slate-900 hidden md:flex md:justify-between mr-6  md:flex-wrap">
+        <ul class="dark:text-white text-slate-900 hidden md:flex md:justify-between mr-6  md:flex-wrap" id="sidemenu">
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#home">Home</a>
@@ -42,20 +42,20 @@
             </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
-                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Portfolio</a>
+                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#portfolio">Portfolio</a>
             </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
-                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Certifications</a>
+                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#certificates">Certifications</a>
             </li>
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
-                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#">Contact</a>
+                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#contact">Contact</a>
             </li>
-            
+            <i class="fas fa-times md:hidden block cursor-pointer" onclick="closemenu()"></i>
         </ul>
         <!-- Navlinks Menu -->
-        <i class="fa-solid fa-bars md:hidden text-white cursor-pointer flex mr-8 text-3xl"></i>
+        <i class="fa-solid fa-bars md:hidden text-white cursor-pointer flex mr-8 text-3xl" onclick="openmenu()"></i>
     </nav>
     <!-- Navbar Ends -->
 
@@ -68,14 +68,15 @@
 
             <span class="text-3xl font-bold dark:text-cyan-400 text-cyan-950 ">I'm Nishant</span>
 
-            <p class="text-3xl py-7 dark:text-white text-black">I'm a Web Developer and a Graphic Designer.</p>
-
-            <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950 hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
-
-                <i class="fa-solid fa-arrow-right text-2xl mx-2 animate-pulse duration-700 dark:animate-none"></i>
-                <a class="text-[20px]" href="../assets/Nishant's Updated Resume (2).pdf" target="_blank" download="">Download Resume</a>
-
-            </button>
+            <p class="text-3xl py-3 dark:text-white text-black">I'm a Web Developer and a Graphic Designer.</p>
+            <div class="header-btn justify-center md:justify-normal items-center w-full flex">
+                <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950  w-[300px] hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
+    
+                    <i class="fa-solid fa-arrow-right text-2xl mx-2 animate-pulse duration-700 dark:animate-none"></i>
+                    <a class="text-[20px]" href="../assets/Nishant's Updated Resume (2).pdf" target="_blank" download="">Download Resume</a>
+    
+                </button>
+            </div>
         </div>
 
         <div class="right-section md:w-[100%] mt-7 md:mt-12 md:mx-0 mx-4 flex justify-center  items-center">
@@ -124,7 +125,7 @@
     <div class="skills-container w-full h-auto mt-9 flex flex-col items-center" id="skills">
 
         <h1 class="dark:text-white text-3xl text-center font-bold">My Skills</h1>
-        <div class="skills-imgs grid grid-cols-3 grid-row-3 md:grid-col-1 md:grid-rows-1 gap-8 justify-items-center my-12 w-[100%]">
+        <div class="skills-imgs grid grid-cols-2 md:grid-cols-3 md:grid-row-3 md:grid-col-1 md:grid-rows-1 gap-8 justify-items-center my-12 w-[100%]">
             <div class="flex flex-col justify-center items-center px-2 dark:shadow-none shadow-md rounded-lg dark:rounded-none ">
                 <img class="w-[150px] h-[150px]  hover:scale-110 duration-500" src="../assets/Skills Images/HTML 3D.png" alt="">
                 <span class="dark:text-white font-semibold">HTML</span>
@@ -176,50 +177,108 @@
     <div class="portfolio-container w-full h-auto mt-9 flex flex-col items-center" id="portfolio">
        
         <h1 class="dark:text-white text-3xl text-center font-bold">Portfolio</h1>
-        <div class="skills-imgs grid grid-cols-3 grid-row-3 md:grid-col-1 md:grid-rows-1 gap-8 justify-items-center my-12 w-[100%]">
-            <div class="flex flex-col justify-center items-center px-2 dark:shadow-none shadow-md rounded-lg dark:rounded-none ">
-                    <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/SPIN WHEELS.png" alt="">
+        <div class="skills-imgs grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-row-3 md:grid-col-1 md:grid-rows-1 gap-8 justify-items-center my-8 w-[100%]">
+
+            <!-- Spin Wheels Starts -->
+            <div class="flex flex-col justify-center items-center px-2 rounded-lg dark:rounded-none ">
+                <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/SPIN WHEELS.png" alt="">
                 
                 <div class="flex py-4">
-                    <a class="text-white" target="_blank" href="../assets/Projects/cars website/index.html">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <a class="dark:text-white" target="_blank" href="../assets/Projects/cars website/index.html">
+                        <i class="fa-solid fa-arrow-up-right-from-square">
+                            <span class="dark:text-white font-semibold mx-2">HTML</span>
+                        </i>
                     </a>
-                    <span class="dark:text-white font-semibold mx-2">HTML</span>
                 </div>
             </div>
-            <div class="flex flex-col justify-center items-center px-2 dark:shadow-none shadow-md rounded-lg dark:rounded-none ">
-                    <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/PBMS2.jpeg" alt="">
-                
-                <div class="flex py-4  text-center">
-                    <a class="text-white" target="_blank" href="">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                    <span class="dark:text-white font-semibold mx-2">Pharmacy Billing & <br> Management System</span>
-                </div>
-            </div>
-            <div class="flex flex-col justify-center items-center px-2 dark:shadow-none shadow-md rounded-lg dark:rounded-none ">
-                    <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/Bike.png" alt="">
+            <!-- Spin Wheels Ends -->
+
+            <!-- Bike Landing Page Starts -->
+            <div class="flex flex-col justify-center items-center px-2 rounded-lg dark:rounded-none ">
+                <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/Bike.png" alt="">
                 
                 <div class="flex py-4">
-                    <a class="text-white" target="_blank" href="../assets/cars website/index.html">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <a class="dark:text-white" target="_blank" href="../assets/Projects/Project 3_ Bike landing page/dist/index.html">
+                        <i class="fa-solid fa-arrow-up-right-from-square">
+                            <span class="dark:text-white font-semibold mx-2">Bike Landing Page</span>
+                        </i>
                     </a>
-                    <span class="dark:text-white font-semibold mx-2">Bike Landing Page</span>
                 </div>
             </div>
-            <div class="flex flex-col justify-center items-center px-2 dark:shadow-none shadow-md rounded-lg dark:rounded-none ">
-                    <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/Bike.png" alt="">
+            <!-- Bike Landing Page Ends -->
+
+            <!-- NFT Landing Page Starts -->
+            <div class="flex flex-col justify-center items-center px-2 rounded-lg dark:rounded-none ">
+                <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/NFT.png" alt="">
                 
                 <div class="flex py-4">
-                    <a class="text-white" target="_blank" href="../assets/cars website/index.html">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <a class="dark:text-white" target="_blank" href="../assets/Projects/Project 4_ NFT Landing page/dist/index.html">
+                        <i class="fa-solid fa-arrow-up-right-from-square">
+                            <span class="dark:text-white font-semibold mx-2">NFT Landing Page</span>
+                        </i>
                     </a>
-                    <span class="dark:text-white font-semibold mx-2">HTML</span>
                 </div>
             </div>
+            <!-- NFT Landing Page Ends -->
+
+            <!-- PixeLab Landing Page Starts -->
+            <div class="flex flex-col justify-center items-center px-2 rounded-lg dark:rounded-none ">
+                <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/PixeLab.png" alt="">
+                
+                <div class="flex py-4">
+                    <a class="dark:text-white" target="_blank" href="../assets/Projects/Project 5_ Pixlab/dist/index.html">
+                        <i class="fa-solid fa-arrow-up-right-from-square">
+                            <span class="dark:text-white font-semibold mx-2">PixeLab</span>
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <!-- PixeLab Landing Page Ends -->
+
+
+            <!-- Hospital Landing Page Starts -->
+            <div class="flex flex-col justify-center items-center px-2 rounded-lg dark:rounded-none ">
+                <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/Hospital Landing Page.png" alt="">
+                
+                <div class="flex py-4">
+                    <a class="dark:text-white" target="_blank" href="../assets/Projects/Project 2_ hospital website landing page/index.html">
+                        <i class="fa-solid fa-arrow-up-right-from-square">
+                            <span class="dark:text-white font-semibold mx-2">Hospital Landing Page</span>
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <!-- Hospital Landing Page Ends -->
+
+            <!-- PBMS Starts -->
+            <div class="flex flex-col justify-center items-center px-2 rounded-lg dark:rounded-none ">
+                            <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/PBMS2.jpeg" alt="">
+                            
+                            <div class="flex py-4 text-center justify-center items-center">
+                                <a class="dark:text-white text-center" target="_blank" href="https://github.com/Nishant29-N/Pharmacy-Billing-and-Management-System">
+                                    <i class="fa-solid fa-arrow-up-right-from-square">
+                                    </i>
+                                </a>
+                                <span class="dark:text-white font-semibold mx-2">Pharmacy Billing &<br>Management System</span>
+                            </div>
+            </div>
+            <!-- PBMS Ends -->
         </div>    
     </div>
 
     <!-- Portfolio Ends -->
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+    
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    
+    </script>
 </body>
 </html> 
