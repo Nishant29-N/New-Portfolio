@@ -52,10 +52,10 @@
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#contact">Contact</a>
             </li>
-            <i class="fas fa-times md:hidden block cursor-pointer" onclick="closemenu()"></i>
+            <i class="fas fa-solid fa-xmark dark:text-white block md:hidden cursor-pointer" onclick="closemenu()" id="sidemenu"></i>
         </ul>
         <!-- Navlinks Menu -->
-        <i class="fa-solid fa-bars md:hidden text-white cursor-pointer flex mr-8 text-3xl" onclick="openmenu()"></i>
+        <i class="fa-solid fa-bars md:hidden text-white cursor-pointer flex mr-8 text-3xl" id="sidemenu" onclick="openmenu()"></i>
     </nav>
     <!-- Navbar Ends -->
 
@@ -271,12 +271,12 @@
     <script>
 
         var sidemenu = document.getElementById("sidemenu");
-    
-        function openmenu() {
+
+        function closemenu() {
             sidemenu.style.right = "0";
         }
-        function closemenu() {
-            sidemenu.style.right = "-200px";
+        function openmenu() {
+            sidemenu.style.right = "-200";
         }
     
     </script>
