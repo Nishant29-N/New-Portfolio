@@ -23,6 +23,27 @@
             font-family: Montserrat;
             scroll-behavior: smooth;
         }
+
+        /* width */
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        }
+        
     </style>
 </head>
 <body class="bg-slate-100 dark:bg-slate-950 m-0">
@@ -52,10 +73,10 @@
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#contact">Contact</a>
             </li>
-            <i class="fas fa-solid fa-xmark dark:text-white block md:hidden cursor-pointer" onclick="closemenu()" id="sidemenu"></i>
+            <i class="fas fa-solid fa-xmark text-black dark:text-white block md:hidden cursor-pointer"></i>
         </ul>
         <!-- Navlinks Menu -->
-        <i class="fa-solid fa-bars md:hidden text-white cursor-pointer flex mr-8 text-3xl" id="sidemenu" onclick="openmenu()"></i>
+        <i class="fa-solid fa-bars md:hidden text-black dark:text-white cursor-pointer flex mr-8 text-3xl"></i>
     </nav>
     <!-- Navbar Ends -->
 
