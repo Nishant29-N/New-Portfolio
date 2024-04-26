@@ -17,6 +17,10 @@
     <!-- fontswesome -->
     <script src="https://kit.fontawesome.com/bc94aa2890.js" crossorigin="anonymous"></script>
 
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <style>
         @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
         * {
@@ -47,36 +51,52 @@
     </style>
 </head>
 <body class="bg-slate-100 dark:bg-slate-950 m-0">
+
+    <!-- PreLoader -->
+
+    <div class="spinner flex items-center  dark:fill-white fill-black justify-center h-screen dark:bg-slate-950" id="preloader">
+        <svg class="w-10 h-10  dark:fill-white fill-black animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg>
+    </div>
+
     <!-- Navbar Starts -->
-    <nav class="bg-slate-100 dark:bg-slate-950 md:top-0 top-0 z-40 sticky md:sticky shadow-md dark:shadow-cyan-200 md:flex flex justify-between items-center md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
-        <img class="w-24 ml-0 md:ml-6 cursor-pointer flex" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
-
+    <nav class="bg-slate-100 dark:bg-slate-950 md:top-0 right-0 top-0 z-40 sticky md:sticky shadow-md dark:shadow-cyan-200 md:flex justify-between md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
+        <div class="flex justify-between items-center">
+            <span>
+                <img class="w-24 ml-0 md:ml-6 cursor-pointer flex" src="../assets/icon.png" alt="logo-png"><a href="#home"></a></img>
+            </span>
+            <span class="cursor-pointer text-3xl font-bold md:mx-0 mx-4 md:hidden block dark:text-white duration-500">
+                 <!-- Navlinks Menu -->
+                 <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
         <!-- Nav Links -->
-        <ul class="dark:text-white text-slate-900 hidden md:flex md:justify-between mr-6  md:flex-wrap" id="sidemenu">
+        <ul class="dark:text-white text-slate-900 absolute md:static  block z-[-1] md:z-auto flex-col md:flex-row md:flex md:justify-between mr-6 bg-slate-950  md:flex-wrap md:opacity-100 opacity-0 md:py-3 py-0 transition-all ease-in duration-500 left-0" id="sidemenu">
 
-            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg my-2 mx-2 md:m-0">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#home">Home</a>
             </li>
 
-            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg my-2 mx-2 md:m-0">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#about">About</a>
             </li>
 
-            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg my-2 mx-2 md:m-0">
+                <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#skills">Skills</a>
+            </li>
+
+            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg my-2 mx-2 md:m-0">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#portfolio">Portfolio</a>
             </li>
 
-            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg my-2 mx-2 md:m-0">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#certificates">Certifications</a>
             </li>
 
-            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg">
+            <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out w-[150px] text-center hover:shadow-md rounded-lg my-2 mx-2 md:m-0">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#contact">Contact</a>
             </li>
-            <i class="fas fa-solid fa-xmark text-black dark:text-white block md:hidden cursor-pointer"></i>
         </ul>
-        <!-- Navlinks Menu -->
-        <i class="fa-solid fa-bars md:hidden text-black dark:text-white cursor-pointer flex mr-8 text-3xl"></i>
+
     </nav>
     <!-- Navbar Ends -->
 
@@ -90,7 +110,7 @@
             <span class="text-3xl font-bold dark:text-cyan-400 text-cyan-950 ">I'm Nishant</span>
 
             <p class="text-3xl py-3 dark:text-white text-black">I'm a Web Developer and a Graphic Designer.</p>
-            <div class="header-btn justify-center md:justify-normal items-center w-full flex">
+            <div class="header-btn justify-normal md:justify-normal items-center w-full flex">
                 <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950  w-[300px] hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
     
                     <i class="fa-solid fa-arrow-right text-2xl mx-2 animate-pulse duration-700 dark:animate-none"></i>
@@ -273,15 +293,15 @@
 
             <!-- PBMS Starts -->
             <div class="flex flex-col justify-center items-center px-2 rounded-lg dark:rounded-none ">
-                            <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/PBMS2.jpeg" alt="">
+                <img class="w-[300px] rounded-md hover:scale-110 duration-500" src="../assets/Projects Images/PBMS2.jpeg" alt="">
                             
-                            <div class="flex py-4 text-center justify-center items-center">
-                                <a class="dark:text-white text-center" target="_blank" href="https://github.com/Nishant29-N/Pharmacy-Billing-and-Management-System">
-                                    <i class="fa-solid fa-arrow-up-right-from-square">
-                                    </i>
-                                </a>
-                                <span class="dark:text-white font-semibold mx-2">Pharmacy Billing &<br>Management System</span>
-                            </div>
+                <div class="flex py-4 text-center justify-center items-center">
+                    <a class="dark:text-white text-center" target="_blank" href="https://github.com/Nishant29-N/Pharmacy-Billing-and-Management-System">
+                        <i class="fa-solid fa-arrow-up-right-from-square">
+                        </i>
+                        <span class="dark:text-white font-semibold mx-2">Pharmacy Billing &<br>Management System</span>
+                    </a>
+                    </div>
             </div>
             <!-- PBMS Ends -->
         </div>    
@@ -289,17 +309,23 @@
 
     <!-- Portfolio Ends -->
 
+    <!-- Side Menu Script -->
     <script>
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function closemenu() {
-            sidemenu.style.right = "0";
+        function Menu(e){
+            let list = document.querySelector('ul');
+            e.name === 'menu-outline' ? (e.name = "close-outline", list.classList.add('top-[100px]'), list.classList.add('opacity-100')) : (e.name = "menu-outline",list.classList.remove('top-[100px]'),list.classList.remove('opacity-100'))
         }
-        function openmenu() {
-            sidemenu.style.right = "-200";
-        }
-    
     </script>
+
+    
+    <!-- CDN Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(window).on('load', function() {
+            $('.spinner').fadeOut();
+        });
+    </script>
+
 </body>
 </html> 
