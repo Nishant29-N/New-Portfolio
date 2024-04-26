@@ -301,7 +301,7 @@
                         </i>
                         <span class="dark:text-white font-semibold mx-2">Pharmacy Billing &<br>Management System</span>
                     </a>
-                    </div>
+                </div>
             </div>
             <!-- PBMS Ends -->
         </div>    
@@ -312,11 +312,78 @@
 
     <!-- Certifications Starts -->
 
-    
+    <section class="certificate-container w-full h-auto flex flex-col items-center" id="certificates">
+        <h1 class="dark:text-white text-3xl text-center py-5 font-bold">Certifications</h1>
+
+        <div class="certificates-imgs py-5 grid grid-rows-3 grid-cols-2 md:grid-cols-3 md:grid-row-3  md:grid-rows-1 gap-8 justify-items-center my-8 w-[90%] md:w-[100%]  mx-9 md:mx-0">
+            <div class="certificate">
+                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/Web Development Ultimate Guide JPG.jpg" alt="WebDev">
+            </div>
+            <div class="certificate">
+                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/css.jpg" alt="WebDev">
+            </div>
+            <div class="certificate">
+                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/Learn Coding with Java from Scratch Essential Training 2023 Udemy.jpg" alt="WebDev">
+            </div>
+            <div class="certificate">
+                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/sql.jpg" alt="WebDev">
+            </div>
+            <div class="certificate">
+                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/c++.jpg" alt="WebDev">
+            </div>
+            <div class="certificate">
+                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/videoediting.png" alt="WebDev">
+            </div>
+        </div>
+    </section>
 
     <!-- Certifications Ends -->
 
+    <!-- Contact Information Starts -->
 
+    <footer class="footer-container flex md:flex-row flex-col  flex-wrap justify-center items-center bg-slate-100 dark:bg-slate-900 w-[100%] h-auto" id="contact">
+        <div class="left-footer flex  flex-wrap dark:text-white w-[50%] ml-9">
+            <div class="text-left flex flex-col flex-wrap"> 
+                <h1 class="text-3xl font-bold my-4">Contact Me</h1>
+                <p><i class="fa-solid mr-5 fa-paper-plane py-5"></i>nishantn0709@gmail.com</p>
+                <p><i class="fa-solid mr-5 fa-phone py-5"></i>+91-8882124299</p>
+                <div class="flex social-icons">
+                    <i class="fa-brands fa-linkedin cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4">
+                        <a href="https://www.linkedin.com/in/nishant-brathi/"></a>
+                    </i>
+                    <i class="fa-brands fa-github cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4">
+                        <a href="https://github.com/Nishant29-N"></a>
+                    </i>
+                    <i class="fa-brands fa-instagram cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4">
+                        <a href="https://www.instagram.com/nishant_brathi/"></a>
+                    </i>
+                </div>
+                <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950 my-4  w-[240px] hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
+    
+                    <i class="fa-solid fa-arrow-right text-xl mx-2 animate-pulse duration-700 dark:animate-none"></i>
+                    <a class="text-[16px]" href="../assets/Nishant's Updated Resume (2).pdf" target="_blank" download="">Download Resume</a>
+    
+                </button>
+            </div>
+            
+        </div>
+        <div class="right-footer mx-5 flex flex-wrap  my-10">
+            <form name="submit-to-google-sheet" class="flex flex-col">
+                <label class="my-1 dark:text-white  font-semibold md:w-[500px] rounded-md py-1 " for="Name">Name:</label>
+                <input class="my-1 w-[500px] rounded-md py-[8px] text-left bg-white" type="text" name="Name"  required>
+                <label class="my-1 dark:text-white  font-semibold md:w-[500px] rounded-md py-1 " for="Email">Email:</label>
+                <input class="my-1 w-[500px] rounded-md py-[8px] text-left bg-white" type="email" name="Email"  required>
+                <label class="my-1  dark:text-white  font-semibold md:w-[500px] rounded-md py-1 " for="Message">Message:</label>
+                <textarea class="my-1 w-[500px] rounded-md py-1 text-left bg-white" name="Message" rows="6"></textarea>
+                <button class=" w-[200px] rounded-md hover:bg-slate-950 duration-300 py-1 text-white font-semibold bg-cyan-600 border border-white my-4" type="submit" class="btn btn2">Submit</button>
+            </form>
+            <!-- <span class="text-white font-medium" id="msg">Message Sent!</span> -->
+        </div>
+
+    </footer>
+    <p class="text-white text-center font-medium my-2">Copyright 2024 Nishant. All Rights Reserved.</p>
+
+    <!-- Contact Information Ends -->
 
 
 
@@ -339,6 +406,28 @@
             $('.spinner').fadeOut();
         });
     </script>
+
+
+    <!-- Contact Form Script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwZ5LAaJLkitWDbd25UFJYKFAr_GFYRYHrVVIn16tDLQnoxkCwJg2cGHOvbzKhh5Uya/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 3000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
 
 </body>
 </html> 
