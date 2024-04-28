@@ -52,11 +52,14 @@
 </head>
 <body class="bg-slate-100 dark:bg-slate-950 m-0">
 
-    <!-- PreLoader -->
-
+    <!-- PreLoader Starts -->
+    
     <div class="spinner flex items-center  dark:fill-white fill-black justify-center h-screen dark:bg-slate-950" id="preloader">
         <svg class="w-10 h-10  dark:fill-white fill-black animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg>
     </div>
+
+    <!-- PreLoader Ends -->
+
 
     <!-- Navbar Starts -->
     <nav class="bg-slate-100 dark:bg-slate-950 md:top-0 right-0 top-0 z-40 sticky md:sticky shadow-md dark:shadow-cyan-200 md:flex justify-between md:justify-between max-h-28 md:items-center w-full" id="nav-bar-container">
@@ -70,7 +73,7 @@
             </span>
         </div>
         <!-- Nav Links -->
-        <ul class="dark:text-white text-slate-900 absolute md:static  block z-[-1] md:z-auto flex-col md:flex-row md:flex md:justify-between md:mr-6 mr-0 bg-slate-950  md:flex-wrap md:opacity-100 opacity-0 md:py-3 py-0 transition-all ease-in duration-500 left-0 md:shadow-none shadow-md shadow-cyan-200 md:border-none rounded-md" id="sidemenu">
+        <ul class="dark:text-white md:bg-none text-slate-900 absolute md:static  block z-[-1] md:z-auto flex-col md:flex-row md:flex md:justify-between md:mr-6 mr-0  md:flex-wrap md:opacity-100 opacity-0 md:py-3 py-0 transition-all ease-in duration-500 left-0 md:shadow-none shadow-md shadow-cyan-200 md:border-none md:rounded-none rounded-lg" id="sidemenu">
 
             <li class="hover:dark:shadow-cyan-200 shadow-black duration-500 ease-in-out py-2 md:py-0 px-4 md:px-7 text-center hover:shadow-md rounded-lg my-2 mx-2 md:m-0">
                 <a class="text-[18px]  hover:font-bold duration-300 font-semibold" href="#home">Home</a>
@@ -100,18 +103,19 @@
     </nav>
     <!-- Navbar Ends -->
 
+
     <!-- Header Starts -->
 
-    <header class="flex flex-col md:flex-row w-full top-0 h-full">
-        <div class="left-section flex flex-col mt-8 text-white justify-center text-left mx-20"  id="home">
+    <header class="flex flex-col md:flex-row w-full top-0 h-screen">
+        <div class="left-section flex flex-col text-white justify-center text-left mx-20"  id="home">
 
-            <h1 class="text-3xl dark:text-white text-black">Hi!</h1>
+            <h1 class="text-3xl dark:text-white text-black  md:mt-0 mt-6">Hi!</h1>
 
             <span class="text-3xl font-bold dark:text-cyan-400 text-cyan-950 ">I'm Nishant</span>
 
             <p class="text-3xl py-3 dark:text-white text-black">I'm a Web Developer and a Graphic Designer.</p>
             <div class="header-btn justify-normal md:justify-normal items-center w-full flex">
-                <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950  w-[300px] hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
+                <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950  w-[300px] hover:font-bold my-5 hover:text-white duration-200 justify-center flex items-center hover:animate-none">
     
                     <i class="fa-solid fa-arrow-right text-2xl mx-2 animate-pulse duration-700 dark:animate-none"></i>
                     <a class="text-[20px]" href="../assets/Nishant's Updated Resume (2).pdf" target="_blank" download="">Download Resume</a>
@@ -120,7 +124,7 @@
             </div>
         </div>
 
-        <div class="right-section md:w-[100%] mt-7 md:mt-12 md:mx-0 mx-4 flex justify-center  items-center">
+        <div class="right-section md:w-[100%]  md:mx-0 mx-4 flex justify-center  items-center">
             <img class="dark:border-x-[#ff84f1] dark:border-y-[#bcf5ff] border-black border rounded-full" src="../assets/hero-container-img.png" alt="">
         </div>
 
@@ -128,9 +132,10 @@
 
     <!-- Header Ends -->
 
+
     <!-- About Section Starts -->
 
-    <div class="about-section-main h-auto md:mt-[120px] flex flex-col md:flex-row w-full items-center" id="about">
+    <div class="about-section-main h-max flex flex-col md:flex-row w-full items-center" id="about">
 
         <div class="about-left md:w-full flex justify-center items-center mt-11 md:mx-0 mx-4">
             <img class="dark:border-x-[#ff84f1] dark:border-y-[#bcf5ff] border-black w-[100%]  md:mx-0 mx-4 border rounded-full" src="../assets/about-container-img.png" alt="">
@@ -163,7 +168,7 @@
 
     <!-- Skills Section Starts -->
 
-    <div class="skills-container w-full h-auto mt-9 flex flex-col items-center" id="skills">
+    <div class="skills-container w-full h-max flex flex-col items-center" id="skills">
 
         <h1 class="dark:text-white text-3xl text-center font-bold">My Skills</h1>
         <div class="skills-imgs grid grid-cols-2 md:grid-cols-3 md:grid-row-3 md:grid-col-1 md:grid-rows-1 gap-8 justify-items-center my-12 w-[100%]">
@@ -213,9 +218,10 @@
 
     <!-- Skills Section Ends -->
 
+
     <!-- Portfolio Starts -->
 
-    <div class="portfolio-container w-full h-auto mt-9 flex flex-col items-center" id="portfolio">
+    <div class="portfolio-container w-full h-max mt-9 flex flex-col items-center" id="portfolio">
        
         <h1 class="dark:text-white text-3xl text-center font-bold">Portfolio</h1>
         <div class="skills-imgs grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-row-3 md:grid-col-1 md:grid-rows-1 gap-8 justify-items-center my-8 w-[100%]">
@@ -312,41 +318,42 @@
 
     <!-- Certifications Starts -->
 
-    <section class="certificate-container w-full h-auto flex flex-col items-center" id="certificates">
+    <section class="certificate-container w-full h-max flex flex-col items-center" id="certificates">
         <h1 class="dark:text-white text-3xl text-center py-5 font-bold">Certifications</h1>
 
         <div class="certificates-imgs py-5 grid grid-rows-3 grid-cols-2 md:grid-cols-3 md:grid-row-3  md:grid-rows-1 gap-8 justify-items-center my-8 w-[90%] md:w-[100%]  mx-9 md:mx-0">
             <div class="certificate">
-                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/Web Development Ultimate Guide JPG.jpg" alt="WebDev">
+                <img class="w-[300px] dark:drop-shadow-none drop-shadow-md rounded-md" src="../assets/ceritificates jpg/Web Development Ultimate Guide JPG.jpg" alt="WebDev">
             </div>
             <div class="certificate">
-                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/css.jpg" alt="WebDev">
+                <img class="w-[300px] dark:drop-shadow-none drop-shadow-md rounded-md" src="../assets/ceritificates jpg/css.jpg" alt="WebDev">
             </div>
             <div class="certificate">
-                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/Learn Coding with Java from Scratch Essential Training 2023 Udemy.jpg" alt="WebDev">
+                <img class="w-[300px] dark:drop-shadow-none drop-shadow-md rounded-md" src="../assets/ceritificates jpg/Learn Coding with Java from Scratch Essential Training 2023 Udemy.jpg" alt="WebDev">
             </div>
             <div class="certificate">
-                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/sql.jpg" alt="WebDev">
+                <img class="w-[300px] dark:drop-shadow-none drop-shadow-md rounded-md" src="../assets/ceritificates jpg/sql.jpg" alt="WebDev">
             </div>
             <div class="certificate">
-                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/c++.jpg" alt="WebDev">
+                <img class="w-[300px] dark:drop-shadow-none drop-shadow-md rounded-md" src="../assets/ceritificates jpg/c++.jpg" alt="WebDev">
             </div>
             <div class="certificate">
-                <img class="w-[300px] rounded-md" src="../assets/ceritificates jpg/videoediting.png" alt="WebDev">
+                <img class="w-[300px] dark:drop-shadow-none drop-shadow-md rounded-md" src="../assets/ceritificates jpg/videoediting.png" alt="WebDev">
             </div>
         </div>
     </section>
 
     <!-- Certifications Ends -->
 
+
     <!-- Contact Information Starts -->
 
-    <footer class="footer-container flex md:flex-row flex-col  flex-wrap justify-center items-center bg-slate-100 dark:bg-slate-900 w-[100%] h-auto" id="contact">
-        <div class="left-footer flex  flex-wrap dark:text-white w-[50%] ml-9">
+    <footer class="footer-container flex md:flex-row flex-col flex-wrap justify-center md:justify-normal items-center bg-slate-100 dark:bg-slate-900 w-[100%]  h-max" id="contact">
+        <div class="left-footer flex  flex-wrap dark:text-white w-[50%] md-0  md:ml-9">
             <div class="text-left flex flex-col flex-wrap"> 
                 <h1 class="text-3xl font-bold my-4">Contact Me</h1>
-                <p><i class="fa-solid mr-5 fa-paper-plane py-5"></i>nishantn0709@gmail.com</p>
-                <p><i class="fa-solid mr-5 fa-phone py-5"></i>+91-8882124299</p>
+                <p><i class="fa-solid mr-0 md:mr-5 fa-paper-plane py-5"></i>nishantn0709@gmail.com</p>
+                <p><i class="fa-solid mr-0 md:mr-5 fa-phone py-5"></i>+91-8882124299</p>
                 <div class="flex social-icons">
                     <i class="fa-brands fa-linkedin cursor-pointer text-4xl mr-8 dark:text-white text-black hover:scale-110 duration-300 hover:text-cyan-400 my-4">
                         <a href="https://www.linkedin.com/in/nishant-brathi/"></a>
@@ -358,7 +365,7 @@
                         <a href="https://www.instagram.com/nishant_brathi/"></a>
                     </i>
                 </div>
-                <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950 my-4  w-[240px] hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
+                <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950 my-4  w-[240px] text-white hover:font-bold hover:text-white duration-200 justify-center flex items-center hover:animate-none">
     
                     <i class="fa-solid fa-arrow-right text-xl mx-2 animate-pulse duration-700 dark:animate-none"></i>
                     <a class="text-[16px]" href="../assets/Nishant's Updated Resume (2).pdf" target="_blank" download="">Download Resume</a>
@@ -369,19 +376,20 @@
         </div>
         <div class="right-footer mx-5 flex flex-wrap  my-10">
             <form name="submit-to-google-sheet" class="flex flex-col">
-                <label class="my-1 dark:text-white  font-semibold md:w-[500px] rounded-md py-1 " for="Name">Name:</label>
-                <input class="my-1 w-[500px] rounded-md py-[8px] text-left bg-white" type="text" name="Name"  required>
-                <label class="my-1 dark:text-white  font-semibold md:w-[500px] rounded-md py-1 " for="Email">Email:</label>
-                <input class="my-1 w-[500px] rounded-md py-[8px] text-left bg-white" type="email" name="Email"  required>
-                <label class="my-1  dark:text-white  font-semibold md:w-[500px] rounded-md py-1 " for="Message">Message:</label>
-                <textarea class="my-1 w-[500px] rounded-md py-1 text-left bg-white" name="Message" rows="6"></textarea>
-                <button class=" w-[200px] rounded-md hover:bg-slate-950 duration-300 py-1 text-white font-semibold bg-cyan-600 border border-white my-4" type="submit" class="btn btn2">Submit</button>
+                <label class="my-1 dark:text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Name">Name:</label>
+                <input class="my-1 md:w-[500px] w-[400px] rounded-md py-[8px] text-left dark:bg-white" type="text" name="Name"  required>
+                <label class="my-1 dark:text-white   font-semibold md:w-[500px] rounded-md py-1 " for="Email">Email:</label>
+                <input class="my-1 md:w-[500px] w-[400px] rounded-md  py-[8px] text-left dark:bg-white" type="email" name="Email"  required>
+                <label class="my-1  dark:text-white   font-semibold md:w-[500px] w-[300px] rounded-md py-1 " for="Message">Message:</label>
+                <textarea class="my-1 md:w-[500px] w-[400px] rounded-md py-1 text-left dark:bg-white" name="Message" rows="6"></textarea>
+                <button class=" w-[200px] rounded-md hover:bg-slate-950 text-white duration-300 py-1 dark:text-white font-semibold bg-cyan-600 border border-white my-4" type="submit" class="btn btn2">Submit</button>
+
             </form>
             <!-- <span class="text-white font-medium" id="msg">Message Sent!</span> -->
         </div>
 
     </footer>
-    <p class="text-white text-center font-medium my-2">Copyright 2024 Nishant. All Rights Reserved.</p>
+    <p class="dark:text-white text-center font-medium my-2">Copyright 2024 Nishant. All Rights Reserved.</p>
 
     <!-- Contact Information Ends -->
 
