@@ -48,6 +48,22 @@
         ::-webkit-scrollbar-thumb:hover {
         background: #555;
         }
+
+        #myname {
+            overflow: hidden;
+            display: block;
+            white-space: nowrap;
+            border-right: 0.15em solid #21d2ed;
+            animation: typing 3.5s steps(20, end) infinite;
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 50%;
+            }
+        }
         
     </style>
 </head>
@@ -115,9 +131,9 @@
 
             <h1 class="text-3xl dark:text-white text-black  md:mt-0 mt-6">Hi!</h1>
 
-            <span class="text-3xl font-bold dark:text-cyan-400 text-cyan-950 ">I'm Nishant</span>
+            <span class="text-3xl font-bold dark:text-cyan-400 text-cyan-950" id="myname">I'm Nishant</span>
 
-            <p class="text-3xl py-3 dark:text-white text-black">I'm a Web Developer and a Graphic Designer.</p>
+            <p class="text-3xl py-3 dark:text-white text-black" id="desciption">I'm a Web Developer and a Graphic Designer.</p>
             <div class="header-btn justify-normal md:justify-normal items-center md:w-full flex">
                 <button class="dark:animate-pulse font-semibold bg-cyan-950 border-black dark:bg-cyan-500 rounded-md py-2 dark:border-white border hover:bg-slate-950 w-100px md:w-[250px] hover:font-bold my-5 hover:text-white duration-200 justify-center flex items-center hover:animate-none">
     
