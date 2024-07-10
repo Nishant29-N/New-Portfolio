@@ -64,6 +64,41 @@
                 width: 50%;
             }
         }
+
+        @media only screen and (max-width: 600px) {
+            #myname {
+            overflow: hidden;
+            display: block;
+            white-space: nowrap;
+            border-right: 0.15em solid #21d2ed;
+            animation: typing 3.5s steps(20, end) infinite;
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 75%;
+            }
+        }
+        }
+        @media only screen and (max-width: 768px) {
+            #myname {
+            overflow: hidden;
+            display: block;
+            white-space: nowrap;
+            border-right: 0.15em solid #21d2ed;
+            animation: typing 3.5s steps(20, end) infinite;
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        }
         
     </style>
 </head>
