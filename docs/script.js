@@ -4,6 +4,6 @@
 }
 
 
-$(window).on('load', function() {
-    $('.spinner').fadeOut();
-});
+// $(window).on('load', function() {
+//     $('.spinner').fadeOut();
+// });
